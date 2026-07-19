@@ -27,28 +27,40 @@
     outline: none;
 }
 
-.login input:not([type="text"]) {
+/* Target non-text inputs and button elements. Also use inline-flex so centering works. */
+.login input:not([type="text"]),
+.login button {
     height: 50px;
-    width: 40%
-    display: flex;
+    width: 40%;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     gap: 5%;
     border-radius: 25px;
+    border: none;
+    cursor: pointer;
 }
 
-.login:disabled {
+/* Disabled styling should apply to disabled descendants, not the container itself. */
+.login :disabled,
+.login [disabled],
+.login button:disabled,
+.login input:disabled {
     color: #8c8c8c !important;
     background-image: linear-gradient(to bottom, #aaa, #ddd) !important;
     border: 1px ridge black !important;
+    cursor: not-allowed;
 }
 
-.login #login {
+/* Support both id and name attributes so name vs id discrepancies won't break styling */
+.login #login,
+.login [name="login"] {
     color: white;
     background-color: #08f;
 }
 
-.login #register {
+.login #register,
+.login [name="register"] {
     color: #333;
     background-color: #f5f5f5;
 }
