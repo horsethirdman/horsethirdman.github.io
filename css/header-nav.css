@@ -1,87 +1,90 @@
 @font-face {
-  font-family: 'Rockwell';
-  src: url('/typeface/rockwell.woff2') format('woff2');
-  font-display: swap;
+    font-family: 'Rockwell';
+    src: url('/typeface/rockwell.woff2') format('woff2');
+    font-display: swap;
 }
 
 #webpage-title {
-  font-size: 16px;
-  font-family: Rockwell, Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    font-family: Rockwell, Georgia, "Times New Roman", serif;
 }
 
-nav, header {
+header {
     width: 100%;
     padding: 0;
     margin: 0;
+    /* ignore margin */
+    margin-left: -1rem;
+    margin-right: -1rem;
 }
 
 ul {
-  position: relative;   /* needed so ul::after is positioned relative to the whole nav */
-  width: 100%;          /* make the nav span the page width */
-  box-sizing: border-box;
-  font-family: Roboto, sans-serif;
-  font-size: 18px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  display: flex;
-  gap: 15px;
+    position: relative;   /* needed so ul::after is positioned relative to the whole nav */
+    width: 100%;          /* make the nav span the page width */
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    display: flex;
+    gap: 15px;
 }
 
 /* full-width grey bar across the page */
 ul::after {
-  content: "";
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  bottom: 6px;           /* adjust if you want the bar a few pixels lower/higher */
-  height: 2px;
-  background-color: #ccc;
-  z-index: 0;
+    content: "";
+    position: absolute;
+    left: 0%;
+    right: 0%; 
+    bottom: 6px;           /* adjust if you want the bar a few pixels lower/higher */
+    height: 2px;
+    background-color: #ccc;
+    z-index: 0;
 }
 
 ul li a {
-  position: relative; /* keep links above the full-width bar */
-  z-index: 1;
-  display: block;
-  color: #333;
-  padding: 14px 7px;
-  text-decoration: none;
+    position: relative; /* keep links above the full-width bar */
+    z-index: 1;
+    display: block;
+    color: #333;
+    padding: 14px 7px;
+    text-decoration: none;
 }
 
 /* underline */
 ul li a::after {
-  content: "";
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  bottom: 6px; /* distance from link bottom */
-  height: 0px;
-  background-color: transparent; /* transparent */
-  border-radius: 0px;
-  transition: background-color 0.2s ease, height 0.15s ease;
+    content: "";
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 6px; /* distance from link bottom */
+    height: 0px;
+    background-color: transparent; /* transparent */
+    border-radius: 0px;
+    transition: background-color 0.2s ease, height 0.15s ease;
 }
 
 ul li a:hover {
-  color: #17459b;
-  transition: color 0.3s ease;
+    color: #17459b;
+    transition: color 0.3s ease;
 }
 
 /* thick hover blue line */
 ul li a:hover::after {
-  height: 3px;
-  background-color: #17459b;
-  left: 0%;
-  right: 0%;
+    height: 3px;
+    background-color: #17459b;
+    left: 0%;
+    right: 0%;
 }
 
 /* current */
 ul li a.current {
-  color: #17459b;
+    color: #17459b;
 }
 
 ul li a.current::after {
-  height: 3px;
-  background-color: #17459b;
+    height: 3px;
+    background-color: #17459b;
 }
