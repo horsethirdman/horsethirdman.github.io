@@ -1,4 +1,5 @@
 ul {
+  font-size: 18px;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -12,14 +13,35 @@ ul li a {
   padding: 14px 16px;
   text-decoration: none;
   border-radius: 50%;
+  
 }
 
 ul li a:hover {
   color: #17459b;
-  transition: color 0.3s ease;
 }
 
-ul li a.active {
+ul li a.current {
   color: #17459b;
-  text-decoration: underline overline #17459b;
+}
+
+/* line */
+ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc; /* Initial gray line */
+  transition: background-color 0.3s ease-in-out;
+}
+
+ul li a:hover::after {
+  height: 4px;
+  background-color: #007bff; /* Turns blue on hover */
+}
+
+/* for current page */
+ul li a.current::after {
+  background-color: #007bff;
 }
