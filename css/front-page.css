@@ -6,7 +6,7 @@
 
 /* Main column takes up 75% of the width */
 .main-content {
-    flex: 4; 
+    flex: 3; 
 }
 
 /* Sidebar takes up 25% of the width */
