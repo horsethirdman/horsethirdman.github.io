@@ -30,13 +30,13 @@
 /* Target non-text inputs and button elements. Use inline-flex so centering works. */
 .login input:not([type="text"]),
 .login button {
-    height: 50px;
-    width: 40%;
+    height: 35px;
+    width: 50%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    gap: 5%;
-    border-radius: 25px;
+    gap: 15px;
+    border-radius: 17.5px;
     border: none;
     cursor: pointer;
 }
