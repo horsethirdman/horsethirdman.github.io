@@ -20,12 +20,21 @@ header {
 }
 
 .topnav input[type=text] {
-  float: right;
-  padding: 6px;
-  border: none;
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
 }
 
 .top-nav li a {
@@ -45,7 +54,6 @@ header {
     color: #17459b;
     transition: color 0.3s ease;
 }
-
 
 /* full-width grey bar across the page */
 .top-nav::after {
@@ -87,15 +95,29 @@ header {
     background-color: #17459b;
 }
 
+/* For mobile devices */
 @media screen and (max-width: 768px) {
-  .top-nav {
-    flex-direction: column; /* Vertical */
-    width: 100%;
-    gap: 10px;
-    padding: 0;
-  }
-  
-  .nav-links li {
-    width: 100%; /* Ensures links' area take up full width */
-  }
+    .navbar {
+        position: relative; /* Context for mobile layout positioning */
+        flex-wrap: wrap; /* Allows menu to wrap underneath logo and button */
+    }
+
+    /* Show hamburger button on mobile */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide menu by default on mobile */
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        padding: 15px 0 0 0;
+    }
+
+    /* JavaScript will apply this class to reveal the menu */
+    .nav-links.active {
+        display: flex;
+    }
 }
