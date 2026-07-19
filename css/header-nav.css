@@ -19,7 +19,7 @@ header {
     /* ignore margin */
 }
 
-.topnav input[type=text] {
+.top-nav input[type=text] {
     float: right;
     padding: 6px;
     border: none;
