@@ -18,7 +18,7 @@ ul::after {
   position: absolute;
   left: 0%;
   right: 0%;
-  bottom: 0%;           /* adjust if you want the bar a few pixels lower/higher */
+  bottom: 6px;           /* adjust if you want the bar a few pixels lower/higher */
   height: 2px;
   background-color: #ccc;
   z-index: 0;
