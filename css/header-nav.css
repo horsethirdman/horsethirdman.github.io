@@ -13,9 +13,6 @@ header {
     width: 100%;
     padding: 0;
     margin: 0;
-    /* ignore margin */
-    margin-left: -1rem;
-    margin-right: -1rem;
 }
 
 ul {
@@ -30,6 +27,9 @@ ul {
     background-color: white;
     display: flex;
     gap: 15px;
+    /* ignore margin */
+    margin-left: -1rem;
+    margin-right: -1rem;
 }
 
 /* full-width grey bar across the page */
