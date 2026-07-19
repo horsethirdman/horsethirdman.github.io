@@ -1,0 +1,25 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  display: flex;
+}
+
+ul li a {
+  display: block;
+  color: #333;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+ul li a:hover {
+  color: #17459b;
+  transition: color 0.3s ease;
+}
+
+ul li a.active {
+  color: #17459b;
+  text-decoration: underline overline #17459b;
+}
