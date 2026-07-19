@@ -8,40 +8,50 @@ ul {
 }
 
 ul li a {
+  position: relative; /* needed for the underline pseudo-element */
   display: block;
   color: #333;
   padding: 14px 16px;
   text-decoration: none;
   border-radius: 50%;
-  
 }
 
-ul li a:hover {
-  color: #17459b;
-}
-
-ul li a.current {
-  color: #17459b;
-}
-
-/* line */
+/* underline bar: grey by default, fixed a few pixels above the bottom */
 ul li a::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  left: 10%;
+  right: 10%;
+  bottom: 6px; /* fixed above the bottom of each nav option */
   height: 2px;
-  background-color: #ccc; /* Initial gray line */
-  transition: background-color 0.3s ease-in-out;
+  background-color: #ccc; /* grey */
+  border-radius: 2px;
+  transition: background-color 0.2s ease, height 0.15s ease, left 0.15s ease, right 0.15s ease;
+}
+
+/* hovered: thickened to 4px and blue */
+ul li a:hover {
+  color: #17459b;
+  transition: color 0.3s ease;
 }
 
 ul li a:hover::after {
   height: 4px;
-  background-color: #007bff; /* Turns blue on hover */
+  background-color: #17459b;
+  left: 8%;
+  right: 8%;
 }
 
-/* for current page */
+/* current page: blue underline */
+ul li a.current {
+  color: #17459b;
+}
+
 ul li a.current::after {
-  background-color: #007bff;
+  background-color: #17459b;
+}
+
+ul li a.active {
+  color: #17459b;
+  text-decoration: underline overline #17459b;
 }
