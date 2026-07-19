@@ -1,0 +1,17 @@
+/* Container holds both sections */
+.front-layout {
+  display: flex;
+  gap: 20px; /* Adds space between content and sidebar */
+}
+
+/* Main column takes up 75% of the width */
+.main-content {
+  flex: 3; 
+}
+
+/* Sidebar takes up 25% of the width */
+.login {
+  flex: 2; 
+  background-color: #f4f4f4;
+  padding: 15px;
+}
