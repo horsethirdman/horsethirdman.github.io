@@ -15,7 +15,7 @@ header {
     margin: 0;
 }
 
-ul {
+.top-nav {
     position: relative;   /* needed so ul::after is positioned relative to the whole nav */
     width: 100%;          /* make the nav span the page width */
     box-sizing: border-box;
@@ -30,8 +30,36 @@ ul {
     /* ignore margin */
 }
 
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+.top-nav li a {
+    position: relative; /* keep links above the full-width bar */
+    z-index: 1;
+    display: block;
+    color: #333;
+    padding: 14px 7px;
+    text-decoration: none;
+}
+
+.top-nav li a.current {
+    color: #17459b;
+}
+
+.top-nav li a:hover {
+    color: #17459b;
+    transition: color 0.3s ease;
+}
+
+
 /* full-width grey bar across the page */
-ul::after {
+.top-nav::after {
     content: "";
     position: absolute;
     left: 0%;
@@ -44,17 +72,8 @@ ul::after {
     margin-right: -0.5rem;
 }
 
-ul li a {
-    position: relative; /* keep links above the full-width bar */
-    z-index: 1;
-    display: block;
-    color: #333;
-    padding: 14px 7px;
-    text-decoration: none;
-}
-
 /* underline */
-ul li a::after {
+.top-nav li a::after {
     content: "";
     position: absolute;
     left: 0%;
@@ -66,25 +85,15 @@ ul li a::after {
     transition: background-color 0.2s ease, height 0.15s ease;
 }
 
-ul li a:hover {
-    color: #17459b;
-    transition: color 0.3s ease;
-}
-
 /* thick hover blue line */
-ul li a:hover::after {
+.top-nav li a:hover::after {
     height: 3px;
     background-color: #17459b;
     left: 0%;
     right: 0%;
 }
 
-/* current */
-ul li a.current {
-    color: #17459b;
-}
-
-ul li a.current::after {
+.top-nav li a.current::after {
     height: 3px;
     background-color: #17459b;
 }
