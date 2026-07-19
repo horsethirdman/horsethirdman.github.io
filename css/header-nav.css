@@ -1,5 +1,6 @@
 ul {
-  font-size: 18px;
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -11,18 +12,16 @@ ul li a {
   position: relative; /* needed for the underline pseudo-element */
   display: block;
   color: #333;
-  padding: 14px 16px;
+  padding: 14px 7px;
   text-decoration: none;
-  border-radius: 15%;
 }
 
-/* ALL underline bars:
-                      grey by default, fixed a few pixels above the bottom */
+/* ALL underline bars: grey by default, fixed a few pixels above the bottom */
 ul li a::after {
   content: "";
   position: absolute;
-  left: 10%;
-  right: 10%;
+  left: 0%;
+  right: 0%;
   bottom: 6px; /* fixed above the bottom of each nav option */
   height: 2px;
   background-color: #ccc; /* grey */
@@ -37,16 +36,15 @@ ul li a:hover {
 }
 
 ul li a:hover::after {
-  height: 4px;
+  height: 3px;
   background-color: #17459b;
-  left: 8%;
-  right: 8%;
+  left: 0%;
+  right: 0%;
 }
 
 /* current page: blue underline */
 ul li a.current {
   color: #17459b;
-  border: 3px solid #17459b;
 }
 
 ul li a.current::after {
