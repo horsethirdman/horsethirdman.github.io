@@ -14,7 +14,7 @@
         <h2 id="webpage-title">Horsefirstman Legal Directory</h2>
         <!-- <img height=100 src="/images/payment-unavail.png" alt="header"> -->
         <!-- Give the button the class the JS/CSS expect (menu-toggle). Keep hamburger for compatibility. -->
-        <button class="menu-toggle hamburger" aria-label="Toggle menu">☰</button>
+        <button style="border: 2px solid #333; background-color: #0070ba; padding: 10px; color: #333;" class="hamburger" aria-label="Toggle menu">☰</button>
         
         <!-- Add the nav-links class so the mobile CSS/JS can hide/show it -->
         <ul class="top-nav nav-links">
@@ -31,8 +31,14 @@
             <p>This is the primary content of the website.</p>
         </main>
         <aside class="login">
-            <h3>Related Info</h3>
-            <p>This content is tangentially related to the main article.</p>
+        <h2>Log into your account</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Type username" required>
+                <label for="password">Password:</label>
+                <input type="text" id="password" placeholder="Type password" required>
+                <input type="submit" value="Submit"><button disabled>Register</button>
+            </form>
         </aside>
     </div>
 </body>
