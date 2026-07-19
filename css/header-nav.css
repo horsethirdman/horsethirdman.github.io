@@ -103,12 +103,12 @@ header {
     }
 
     /* Show hamburger button on mobile */
-    .menu-toggle {
+    .hamburger {
         display: block;
     }
 
     /* Hide menu by default on mobile */
-    .nav-links {
+    .top-nav {
         display: none; 
         flex-direction: column;
         width: 100%;
@@ -117,7 +117,7 @@ header {
     }
 
     /* JavaScript will apply this class to reveal the menu */
-    .nav-links.active {
+    .top-nav.active {
         display: flex;
     }
 }
