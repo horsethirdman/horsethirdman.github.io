@@ -1,6 +1,9 @@
 ul {
+  position: relative;   /* needed so ul::after is positioned relative to the whole nav */
+  width: 100%;          /* make the nav span the page width */
+  box-sizing: border-box;
   font-family: Roboto, sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -9,33 +12,46 @@ ul {
   gap: 15px;
 }
 
+/* full-width grey bar across the page */
+ul::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;           /* adjust if you want the bar a few pixels lower/higher */
+  height: 2px;
+  background-color: #ccc;
+  z-index: 0;
+}
+
 ul li a {
-  position: relative; /* needed for the underline pseudo-element */
+  position: relative; /* keep links above the full-width bar */
+  z-index: 1;
   display: block;
   color: #333;
   padding: 14px 7px;
   text-decoration: none;
 }
 
-/* ALL underline bars: grey by default, fixed a few pixels above the bottom */
+/* underline */
 ul li a::after {
   content: "";
   position: absolute;
   left: 0%;
   right: 0%;
-  bottom: 6px; /* fixed above the bottom of each nav option */
-  height: 2px;
-  background-color: #ccc; /* grey */
+  bottom: 6px; /* distance from link bottom */
+  height: 0px;
+  background-color: transparent; /* transparent */
   border-radius: 0px;
-  transition: background-color 0.2s ease, height 0.15s ease, left 0.15s ease, right 0.15s ease;
+  transition: background-color 0.2s ease, height 0.15s ease;
 }
 
-/* hovered: thickened to 4px and blue */
 ul li a:hover {
   color: #17459b;
   transition: color 0.3s ease;
 }
 
+/* thick hover blue line */
 ul li a:hover::after {
   height: 3px;
   background-color: #17459b;
@@ -43,11 +59,12 @@ ul li a:hover::after {
   right: 0%;
 }
 
-/* current page: blue underline */
+/* current */
 ul li a.current {
   color: #17459b;
 }
 
 ul li a.current::after {
+  height: 3px;
   background-color: #17459b;
 }
