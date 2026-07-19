@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Rockwell';
+  src: url('/typeface/rockwell.woff') format('woff');
+  font-display: swap;
+}
+
+#webpage-title {
+  font-size: 16px;
+  font-family: Rockwell, Georgia, "Times New Roman", serif;
+}
+
 ul {
   position: relative;   /* needed so ul::after is positioned relative to the whole nav */
   width: 100%;          /* make the nav span the page width */
