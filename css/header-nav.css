@@ -28,8 +28,8 @@ ul {
     display: flex;
     gap: 15px;
     /* ignore margin */
-    margin-left: -1rem;
-    margin-right: -1rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
 }
 
 /* full-width grey bar across the page */
