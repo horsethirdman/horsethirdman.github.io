@@ -81,13 +81,6 @@ Retrieved 2026-07-20, License - CC BY-SA 4.0
   color: #333;
   font-size: 28px;
   cursor: pointer;
-  /* make hamburger align to search height and center its glyph */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 36px;
-  box-sizing: border-box;
-  padding: 0 8px;
 }
 
 .top-nav li a {
@@ -196,9 +189,8 @@ Retrieved 2026-07-20, License - CC BY-SA 4.0
       padding: 15px 0 0 0;
   }
 
-  /* place search immediately after the hamburger instead of forcing it to the far right */
   .top-nav .search-container {
-      margin-left: 8px; /* was auto; small gap keeps it next to the hamburger */
+      margin-left: auto; /* keep search at the rightmost end */
       display: flex;
       align-items: center;
   }
