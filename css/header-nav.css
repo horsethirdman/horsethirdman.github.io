@@ -24,6 +24,7 @@ header {
   margin-left: auto;
   display: flex;
   align-items: center;
+  bottom: 6px;
 }
 
 .top-nav input[type=text] {
@@ -112,7 +113,7 @@ header {
 }
 
 .top-nav li a.current::after {
-  height: 3px;
+  height: 2px;
   background-color: #17459b;
 }
 
