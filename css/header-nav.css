@@ -30,6 +30,17 @@ header {
   z-index: 1;
 }
 
+/*
+Source - https://stackoverflow.com/a/79982268
+Posted by sesa
+Retrieved 2026-07-20, License - CC BY-SA 4.0
+*/
+
+.top-nav .search-container form {
+  display: flex;
+  align-items: center;
+}
+
 .top-nav input[type="text"] {
   padding: 2px;
   margin: 0;
