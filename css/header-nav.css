@@ -31,6 +31,7 @@ header {
 }
 
 .top-nav input[type="text"] {
+  flex: 1;
   padding: 2px;
   margin: 0;
   height: 36px;
