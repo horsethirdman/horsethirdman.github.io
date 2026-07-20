@@ -20,13 +20,9 @@
         <li><a href="/manual_placeholder">Payment</a></li>
         <li><a href="/manual_placeholder">About</a></li>
         <li class="search-container">
-          <form>
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit" onclick="const searchValue = document.forms[0].elements['search'].value;
-alert(`Not able to load the next page.
-Message: I don't know PHP. As a result, the page does not exist and is not available.
-Your input was "search=${searchValue}"
-This service is unserviceable. Contact the owner of the website.`);"><span style="display: block;" class="material-symbols-outlined">search</span></button>
+          <form id="search-form" aria-label="Site search">
+            <input type="text" id="search-input" placeholder="Search.." name="search">
+            <button type="submit"><span class="material-symbols-outlined">search</span></button>
           </form>
         </li>
       </ul>
