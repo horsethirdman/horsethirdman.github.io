@@ -22,7 +22,7 @@ header {
 .top-nav .search-container {
   margin-left: auto;
   display: flex;
-  align-items: center
+  align-items: center;
   position: relative;
   z-index: 1;
 }
@@ -143,6 +143,12 @@ Retrieved 2026-07-20, License - CC BY-SA 4.0
 
 /* For mobile devices */
 @media screen and (max-width: 768px) {
+  .navbar > h2 {
+    width: 100%;
+    margin: 0;        /* remove default margin so it sits cleanly on its own line */
+    flex-basis: 100%; /* ensures it wraps in the flex container */
+  }
+  
   /* keep navbar as a flex row so the hamburger and search can live on the same line */
   .navbar {
     position: relative; /* Context for mobile layout positioning */
