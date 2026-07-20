@@ -46,7 +46,7 @@
 .login {
   font-family: Inter, Roboto, Arial;
   background-color: white;
-  border-radius: 15px;
+  border-radius: 12.5px;
   padding: 15px;
   width: 90%;
 }
@@ -71,5 +71,7 @@
 }
 
 .login #login {
+  margin-top: 25px;
   color: white;
   background-color: #042e82;
+}
