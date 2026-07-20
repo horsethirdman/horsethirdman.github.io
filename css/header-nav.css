@@ -1,123 +1,139 @@
 header {
-    width: 100%;
-    padding: 0;
-    margin: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .top-nav {
-    position: relative;   /* needed so ul::after is positioned relative to the whole nav */
-    width: 100%;          /* make the nav span the page width */
-    box-sizing: border-box;
-    font-family: Roboto, sans-serif;
-    font-size: 18px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    display: flex;
-    gap: 15px;
-    /* ignore margin */
+  position: relative;   /* needed so ul::after is positioned relative to the whole nav */
+  width: 100%;          /* make the nav span the page width */
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  display: flex;
+  gap: 15px;
+  /* ignore margin */
+}
+
+.top-nav  .search-container {
+  float: right;
 }
 
 .top-nav input[type=text] {
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
 }
 
+.top-nav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.top-nav .search-container button:hover {
+  background: #ccc;
+
 .hamburger {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 .top-nav li a {
-    position: relative; /* keep links above the full-width bar */
-    z-index: 1;
-    display: block;
-    color: #333;
-    padding: 14px 7px;
-    text-decoration: none;
+  position: relative; /* keep links above the full-width bar */
+  z-index: 1;
+  display: block;
+  color: #333;
+  padding: 14px 7px;
+  text-decoration: none;
 }
 
 .top-nav li a.current {
-    color: #17459b;
+  color: #17459b;
 }
 
 .top-nav li a:hover {
-    color: #17459b;
-    transition: color 0.3s ease;
+  color: #17459b;
+  transition: color 0.3s ease;
 }
 
 /* full-width grey bar across the page */
 .top-nav::after {
-    content: "";
-    position: absolute;
-    left: 0%;
-    right: 0%; 
-    bottom: 6px;           /* adjust if you want the bar a few pixels lower/higher */
-    height: 2px;
-    background-color: #ccc;
-    z-index: 0;
-    margin-left: -1rem;
-    margin-right: -0.5rem;
+  content: "";
+  position: absolute;
+  left: 0%;
+  right: 0%; 
+  bottom: 6px;           /* adjust if you want the bar a few pixels lower/higher */
+  height: 2px;
+  background-color: #ccc;
+  z-index: 0;
+  margin-left: -1rem;
+  margin-right: -0.5rem;
 }
 
 /* underline */
 .top-nav li a::after {
-    content: "";
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    bottom: 6px; /* distance from link bottom */
-    height: 0px;
-    background-color: transparent; /* transparent */
-    border-radius: 0px;
-    transition: background-color 0.2s ease, height 0.15s ease;
+  content: "";
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  bottom: 6px; /* distance from link bottom */
+  height: 0px;
+  background-color: transparent; /* transparent */
+  border-radius: 0px;
+  transition: background-color 0.2s ease, height 0.15s ease;
 }
 
 /* thick hover blue line */
 .top-nav li a:hover::after {
-    height: 3px;
-    background-color: #17459b;
-    left: 0%;
-    right: 0%;
+  height: 3px;
+  background-color: #17459b;
+  left: 0%;
+  right: 0%;
 }
 
 .top-nav li a.current::after {
-    height: 3px;
-    background-color: #17459b;
+  height: 3px;
+  background-color: #17459b;
 }
 
 /* For mobile devices */
 @media screen and (max-width: 768px) {
-    .navbar {
-        position: relative; /* Context for mobile layout positioning */
-        flex-wrap: wrap; /* Allows menu to wrap underneath logo and button */
-    }
+  .navbar {
+    position: relative; /* Context for mobile layout positioning */
+    flex-wrap: wrap; /* Allows menu to wrap underneath logo and button */
+  }
 
-    /* Show hamburger button on mobile */
-    .hamburger {
-        display: block;
-    }
+  /* Show hamburger button on mobile */
+  .hamburger {
+    display: block;
+  }
 
-    /* Hide menu by default on mobile */
-    .top-nav {
-        display: none; 
-        flex-direction: column;
-        width: 100%;
-        gap: 15px;
-        padding: 15px 0 0 0;
-    }
+  /* Hide menu by default on mobile */
+  .top-nav {
+      display: none; 
+      flex-direction: column;
+      width: 100%;
+      gap: 15px;
+      padding: 15px 0 0 0;
+  }
 
-    /* JavaScript will apply this class to reveal the menu */
-    .top-nav.active {
-        display: flex;
-    }
+  /* JavaScript will apply this class to reveal the menu */
+  .top-nav.active {
+      display: flex;
+  }
 }
