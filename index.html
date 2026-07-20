@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/header-nav.css">
     <link rel="stylesheet" href="/css/front-page.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
     
     <script src="/javascript/topnav.js" defer></script>
 </head>
@@ -14,7 +15,12 @@
         <h2>Horsethirdman Bank</h2>
         <!-- <img height=100 src="/images/payment-unavail.png" alt="header"> -->
         <button style="border: 2px solid #333; padding: 0px 10px; color: #333;" class="hamburger" aria-label="Toggle menu">☰</button>
-        <input type="text" id="search-bar" placeholder="Search..">
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><span class="material-symbols-outlined">search</span></button>
+            </form>
+        </div>
         <ul class="top-nav">
             <li><a class="current" href="/">Homepage</a></li>
             <li><a href="/manual_placeholder">News</a></li>
