@@ -15,34 +15,41 @@
   flex: 4;
 }
 
+/* aside: stack children vertically and center them */
 .side {
-  flex: 1;  
+  flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;    /* stack login above the button */
+  justify-content: center;   /* center vertically in the aside */
+  align-items: center;       /* center children horizontally */
+  gap: 12px;                 /* space between login and button */
+  padding: 16px;
 }
 
+/* register button: same width as .login and centered */
 #register-account {
-  width: 80%;
+  width: 90%;
+  max-width: 320px;
   height: 50px;
   background-color: white;
-  font-size: 25px;
+  font-size: 18px;
   border-radius: 15px;
-  width: 100%;
   padding-left: 55px;
   border: 1px solid #ccc;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Dollar_Sign_in_Linux_Libertine_Mono_-_U%2B0024.svg/1920px-Dollar_Sign_in_Linux_Libertine_Mono_-_U%2B0024.svg.png");
   background-repeat: no-repeat;
   background-position: 15px center;
   background-size: 25px 25px;
-}
+  cursor: pointer;
 }
 
+/* login box: give a fixed max width so button can match it */
 .login {
   font-family: Inter, Roboto, Arial;
   background-color: white;
   border-radius: 15px;
   padding: 15px;
+  width: 90%;
+  max-width: 320px;          /* adjust as you like */
 }
 
 .login input[type="text"] {
