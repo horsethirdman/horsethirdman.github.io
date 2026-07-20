@@ -113,7 +113,7 @@ header {
 
 /* thick hover blue line */
 .top-nav li a:hover::after {
-  height: 3px;
+  height: 3px !important;
   background-color: #17459b;
   left: 0%;
   right: 0%;
