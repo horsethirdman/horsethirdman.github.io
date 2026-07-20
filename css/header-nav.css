@@ -22,11 +22,8 @@ header {
 .top-nav .search-container {
   margin-left: auto;
   display: flex;
-  align-items: center;
-
-  /* enable bottom to work and keep the search above the grey bar */
+  align-items: center
   position: relative;
-  bottom: 6px;
   z-index: 1;
 }
 
