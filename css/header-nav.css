@@ -19,32 +19,39 @@ header {
   /* ignore margin */
 }
 
-.top-nav  .search-container {
-  /* use flex alignment instead of float so it behaves correctly in a flex container */
+.top-nav .search-container {
   margin-left: auto;
   display: flex;
   align-items: center;
+
+  /* enable bottom to work and keep the search above the grey bar */
+  position: relative;
   bottom: 6px;
+  z-index: 1;
 }
 
 .top-nav input[type=text] {
   padding: 6px;
-  margin-top: 8px;
+  margin: 0;               /* removed margin-top so input aligns vertically */
+  height: 36px;           /* keep input same height as button */
   font-size: 17px;
   border: none;
+  box-sizing: border-box; /* predictable sizing */
 }
 
 .top-nav .search-container button {
-  /* remove float and use spacing that works with flex */
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
+  padding: 0;              /* remove internal padding so width/height control size */
+  margin: 0 16px 0 8px;    /* keep horizontal spacing, no top/bottom margin */
+  width: 36px;             /* square dimensions */
+  height: 36px;
   background: #ddd;
   font-size: 17px;
   border: none;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .top-nav .search-container button:hover {
   background: #ccc;
 }
