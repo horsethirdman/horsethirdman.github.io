@@ -64,7 +64,7 @@
   outline: none;
 }
 
-.login #login {
+.login input[type="submit"]#login {
   margin-top: 20px;
   color: white;
   background-color: #042e82;
