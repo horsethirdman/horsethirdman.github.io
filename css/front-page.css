@@ -1,23 +1,23 @@
 @font-face {
   font-family: 'Inter';
-  src: url('/typeface/inter.woff2') format('woff2');
+  src: url(/typeface/inter.woff2) format(woff2);
 }
 
 /* Container holds both sections */
 .front-layout {
-  background-image: "/images/payment-unavail.png";
+  background-image: url(/images/payment-unavail.png);
   display: flex;
   gap: 20px;
 }
 
 /* Main column takes up 75% of the width */
 .main-content {
-  flex: 4;
+  flex: 7;
 }
 
 /* aside: stack children vertically and center them */
 .side {
-  flex: 1;
+  flex: 3;
   display: flex;
   flex-direction: column;    /* stack login above the button */
   justify-content: center;   /* center vertically in the aside */
@@ -28,17 +28,17 @@
 
 /* register button: same width as .login and centered */
 #register-account {
-  width: 90%;
-  max-width: 320px;
-  height: 50px;
+  width: 80%;
+  height: 45px;
   background-color: white;
-  font-size: 18px;
+  font-size: 17px;
   border-radius: 15px;
-  padding-left: 55px;
+  padding-left: 45px;
   border: 1px solid #ccc;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Dollar_Sign_in_Linux_Libertine_Mono_-_U%2B0024.svg/1920px-Dollar_Sign_in_Linux_Libertine_Mono_-_U%2B0024.svg.png);
   background-repeat: no-repeat;
-  background-position: 15px center;
-  background-size: 25px 25px;
+  background-position: 5px center;
+  background-size: 35px 35px;
   cursor: pointer;
 }
 
@@ -49,7 +49,6 @@
   border-radius: 15px;
   padding: 15px;
   width: 90%;
-  max-width: 320px;          /* adjust as you like */
 }
 
 .login input[type="text"] {
