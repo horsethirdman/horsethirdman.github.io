@@ -12,12 +12,12 @@
 
 /* Main column takes up 75% of the width */
 .main-content {
-  flex: 7;
+  flex: 3;
 }
 
 /* aside: stack children vertically and center them */
 .side {
-  flex: 3;
+  flex: 1;
   display: flex;
   flex-direction: column;    /* stack login above the button */
   justify-content: center;   /* center vertically in the aside */
