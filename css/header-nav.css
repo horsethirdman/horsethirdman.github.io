@@ -1,4 +1,4 @@
-header { 
+header {
   width: 100%;
   padding: 0;
   margin: 0;
@@ -173,7 +173,6 @@ Retrieved 2026-07-20, License - CC BY-SA 4.0
       width: 100%;
       gap: 15px;
       padding: 0;
-      position: static; /* allow absolute-positioned search to be relative to .navbar */
   }
 
   /* Hide all menu items except the search container when not active */
@@ -190,54 +189,9 @@ Retrieved 2026-07-20, License - CC BY-SA 4.0
       padding: 15px 0 0 0;
   }
 
-  /* keep search at the rightmost end and pinned to header row so it stays aligned with hamburger */
   .top-nav .search-container {
-      margin-left: 0; /* remove auto margin when absolute */
-      position: absolute;
-      right: 0.75rem;
-      top: 50%;
-      transform: translateY(-50%);
+      margin-left: auto; /* keep search at the rightmost end */
       display: flex;
       align-items: center;
-      z-index: 2;
-  }
-
-  /* Move the full-width grey bar to the header so it remains across the screen on mobile
-     while preserving the desktop behavior (desktop still uses .top-nav::after). */
-  .top-nav::after {
-    display: none;
-  }
-
-  .navbar::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 6px;
-    height: 2px;
-    background-color: #ccc;
-    z-index: 0;
-  }
-
-  /* Remove per-link underlines and hover lines on mobile only (desktop unaffected) */
-  .top-nav li a::after {
-    display: none;
-  }
-
-  .top-nav li a:hover::after {
-    height: 0;
-    background-color: transparent;
-  }
-
-  /* Make menu options span full width when menu is stacked so anchors are fully clickable */
-  .top-nav.active li {
-    width: 100%;
-  }
-
-  .top-nav.active li a {
-    width: 100%;
-    box-sizing: border-box;
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 }
