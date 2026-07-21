@@ -76,3 +76,9 @@
   border: none;
   cursor: pointer;
 }
+
+@media screen and (max-width: 576px) {
+  .front-layout {
+    flex-direction: column; /* Hide sidebar entirely on phones */
+  }
+}
