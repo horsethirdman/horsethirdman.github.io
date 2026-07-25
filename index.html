@@ -14,13 +14,7 @@
     <header class="navbar">
       <h2>Horsethirdman Bank</h2>
       <img id="signal" src="">
-      <script>
-fetch('https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warnsum&lang=en')
-  .then(r => r.json())
-  .then(d => {
-    document.getElementById('signal').src = `/images/warnings/${d.code}.png`;
-  });
-      </script>
+      <script src="/javascript/weather-api.js"></script>
       <!-- <img height=100 src="/images/payment-unavail.png" alt="header"> -->
       <button class="hamburger" aria-label="Toggle menu">☰</button>
       <ul class="top-nav">
