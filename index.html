@@ -14,7 +14,37 @@
     <header class="navbar">
       <h2>Horsethirdman Bank</h2>
       <div id="hko-typhoon-signal">Loading typhoon status...</div>
-      <script src="/javascript/weather-api.js"></script>
+      <script>
+      async function fetchHKOWarning() {
+        try {
+          const response = await fetch('https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warningInfo&lang=en');
+          const data = await response.json();
+      
+          const container = document.getElementById('hko-warning-content');
+          container.innerHTML = '';
+
+          if (Object.keys(data).length === 0) {
+            container.innerHTML = '<p>No warning signals in force.</p>';
+            return;
+        }
+
+          for (const key in data) {
+            if (data.hasOwnProperty(key)) {
+              const warning = data[key];
+              const p = document.createElement('p');
+              p.textContent = warning.contents.join(' ');
+              container.appendChild(p);
+            }
+          }
+        } catch (error) {
+          document.getElementById('hko-warning-content').textContent = 'Failed to load weather data.';
+        }
+      }
+
+      fetchHKOWarning();
+      // Refresh every 10 minutes
+      setInterval(fetchHKOWarning, 600000);
+      </script>
       <!-- <img height=100 src="/images/payment-unavail.png" alt="header"> -->
       <button class="hamburger" aria-label="Toggle menu">☰</button>
       <ul class="top-nav">
