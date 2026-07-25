@@ -18,7 +18,7 @@
 fetch('https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warnsum&lang=en')
   .then(r => r.json())
   .then(d => {
-    document.getElementById('signal').src = `/images/warnings/${d.code}`;
+    document.getElementById('signal').src = `/images/warnings/${d.code}.gif`;
   });
       </script>
       <!-- <img height=100 src="/images/payment-unavail.png" alt="header"> -->
