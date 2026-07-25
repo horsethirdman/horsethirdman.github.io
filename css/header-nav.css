@@ -4,6 +4,10 @@ header {
   margin: 0;
 }
 
+header h2 {
+  display: inline;
+}
+
 .top-nav {
   position: relative;   /* needed so ul::after is positioned relative to the whole nav */
   width: 100%;          /* make the nav span the page width */
