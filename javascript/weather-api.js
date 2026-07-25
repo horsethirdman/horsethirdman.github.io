@@ -1,27 +1,20 @@
-async function fetchTyphoonSignal() {
-  try {
-    // Fetching warning summary API from HKO
-    const response = await fetch('https://weather.gov.hk');
-    const data = await response.json();
+fetch('https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warnsum&lang=en')
+  .then(r => r.json())
+  .then(d => {
+    // Prefer the tropical cyclone warning if present
+    const tc = d.WTCSGNL;
+    const code = tc && tc.code ? tc.code : null;
 
-    const container = document.getElementById('hko-typhoon-signal');
-
-    // Check if there are active warnings and look for tropical cyclones (TC)
-    let activeSignals = [];
-    for (let key in data) {
-      if (data[key].code) {
-        activeSignals.push(data[key].name);
-      }
-    }
-
-    if (activeSignals.length > 0) {
-      container.innerHTML = `<strong>Active HKO Warning:</strong> ${activeSignals.join(', ')}`;
+    const img = document.getElementById('signal');
+    if (code) {
+      img.src = `/images/warnings/${code}.png`;
+      img.alt = tc.name || code;
     } else {
-      container.innerHTML = 'No tropical cyclone warning signals in force.';
+      // optional: hide the image or show a "no signal" placeholder
+      img.style.display = 'none';
+      // or: img.src = '/images/warnings/placeholder.png';
     }
-  } catch (error) {
-    document.getElementById('hko-typhoon-signal').innerHTML = 'Unable to load weather data.';
-  }
-}
-
-fetchTyphoonSignal();
+  })
+  .catch(err => {
+    console.error('Weather API error:', err);
+  });
