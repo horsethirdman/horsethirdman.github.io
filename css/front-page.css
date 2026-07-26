@@ -13,6 +13,12 @@
       z-index: 1000;             /* Ensures it stays above other elements */
     }
 
+#in-force {
+  background-color: #9c0606; /* Changes background to pink */
+  color: white;            /* Changes text color */
+  font-size: 17px;
+}
+
 /* Container holds both sections */
 .front-layout {
   background-image: url(/images/payment-unavail.png);
