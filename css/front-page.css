@@ -4,19 +4,19 @@
 }
 
 .banner {
-  background-color: #1a4b83; /* Dark slate background color */
-  padding: 10px 20px;        /* Spacing inside the banner */
-  text-align: center;        /* Centers the text */
-  font-size: 14px;           /* Readable small text size */
-  font-weight: 500;          /* Medium text weight */
-  position: relative;        /* Necessary for layouts if needed */
-  z-index: 1000;             /* Ensures it stays above other elements */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* small spacing between items */
 }
 
 #in-force {
-  background-color: #9c0606; /* Changes background to pink */
-  color: white;            /* Changes text color */
-  font-size: 23px;
+  display: inline-block; /* keeps padding from collapsing and allows sizing */
+  background: #ffeb3b;   /* highlight color */
+  padding: 0.12em 0.4em;
+  border-radius: 0.2em;
+  color: white;
+  font-weight: 600;
+  font-family: Inter, sans-serif;
 }
 
 /* Container holds both sections */
