@@ -5,15 +5,14 @@
 
 .banner {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 0.5rem; /* small spacing between items */
 }
 
 #in-force {
-  display: inline-block; /* keeps padding from collapsing and allows sizing */
-  background: #ffeb3b;   /* highlight color */
-  padding: 0.12em 0.4em;
-  border-radius: 0.2em;
+  display: inline;
+  background: #B31B1B;   /* highlight color */
   color: white;
   font-weight: 600;
   font-family: Inter, sans-serif;
