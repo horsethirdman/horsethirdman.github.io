@@ -15,9 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault(); // prevent navigation
     const raw = (searchForm.elements['search'] || {}).value || '';
     const safe = encodeURIComponent(raw);
-    alert(`Not able to load the next page.
-Message: I don't know PHP. As a result, the page does not exist and is not available.
-Your input was "search=${safe}"
-This service is unserviceable. Contact the owner of the website.`);
+    alert(`I don't know PHP. As a result, the page does not exist and is not available yet.
+The input was "search=${safe}"
+This service is not reachable.`);
   });
 });
