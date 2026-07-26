@@ -3,6 +3,16 @@
   src: url(/typeface/inter.woff2) format(woff2);
 }
 
+.banner {
+      background-color: #1a4b83; /* Dark slate background color */
+      padding: 10px 20px;        /* Spacing inside the banner */
+      text-align: center;        /* Centers the text */
+      font-size: 14px;           /* Readable small text size */
+      font-weight: 500;          /* Medium text weight */
+      position: relative;        /* Necessary for layouts if needed */
+      z-index: 1000;             /* Ensures it stays above other elements */
+    }
+
 /* Container holds both sections */
 .front-layout {
   background-image: url(/images/payment-unavail.png);
