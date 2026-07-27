@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.1/lame.min.js"></script>
+</head>
+<body>
+<input type="file" id="file" accept="audio/*">
+<select id="bitrate">
+<option>8</option><option>16</option><option>24</option><option>32</option>
+<option>40</option><option>48</option><option>56</option><option>64</option>
+<option>80</option><option>96</option><option>112</option><option selected>128</option>
+<option>144</option><option>160</option>
+</select>
+kbps
+<button id="go">Convert</button>
+<a id="dl" style="display:none">Download</a>
+<script>
+document.getElementById('go').onclick = async () => {
+  const f = document.getElementById('file').files[0];
+  if (!f) return;
+  const kbps = +document.getElementById('bitrate').value;
+  const buf = await f.arrayBuffer();
+  const ctx = new AudioContext();
+  const ab = await ctx.decodeAudioData(buf);
+  const ch = ab.numberOfChannels;
+  const sr = ab.sampleRate;
+  const enc = new lamejs.Mp3Encoder(ch, sr, kbps);
+  const left = ab.getChannelData(0);
+  const right = ch > 1 ? ab.getChannelData(1) : left;
+  const l = new Int16Array(left.length);
+  const r = new Int16Array(right.length);
+  for (let i = 0; i < left.length; i++) {
+    l[i] = Math.max(-32768, Math.min(32767, left[i] * 32767.5));
+    r[i] = Math.max(-32768, Math.min(32767, right[i] * 32767.5));
+  }
+  const data = [];
+  const block = 1152;
+  for (let i = 0; i < l.length; i += block) {
+    const lb = l.subarray(i, i + block);
+    const rb = r.subarray(i, i + block);
+    const mp3 = ch > 1 ? enc.encodeBuffer(lb, rb) : enc.encodeBuffer(lb);
+    if (mp3.length) data.push(mp3);
+  }
+  const end = enc.flush();
+  if (end.length) data.push(end);
+  const blob = new Blob(data, {type: 'audio/mp3'});
+  const a = document.getElementById('dl');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'out.mp3';
+  a.style.display = '';
+  a.click();
+};
+</script>
+</body>
+</html>
