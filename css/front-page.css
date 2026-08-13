@@ -98,3 +98,11 @@
     flex-direction: column; /* Hide sidebar entirely on phones */
   }
 }
+
+#purge {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  background: none;
+  border: none;
+}
