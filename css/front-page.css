@@ -11,6 +11,10 @@
   gap: 0.5rem; /* small spacing between items */
 }
 
+.banner[hidden] {
+  display: none;
+}
+
 #in-force {
   display: inline;
   background: #B31B1B;   /* highlight color */
