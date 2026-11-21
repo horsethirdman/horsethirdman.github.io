@@ -32,6 +32,7 @@
 
 /* Main column takes up 75% of the width */
 .main-content {
+  color: #eee;
   flex: 3;
 }
 
