@@ -3,21 +3,23 @@
 <head>
   <style>
     body {
-      margin: 0;
     }
-    .container {
+    .container{
       display: flex;
       height: 100vh; /* Full viewport height */
     }
-    .section {
+    .section{
       flex: 1; /* Makes both sections equal width (50% each) */
       padding: 20px;
     }
-    .left {
+    .left{
       background-color: #f4f4f4;
     }
-    .right {
+    .right{
       background-color: #e0e0e0;
+    }
+    #notes{
+      width: 100%
     }
   </style>
 </head>
@@ -27,7 +29,7 @@
     <section class="section left">
       <h2>Left Section</h2>
       <p>Content for the left side goes here.</p>
-      <input type="text"></input>
+      <input type="text" id="notes"></input>
     </section>
     
     <section class="section right">
