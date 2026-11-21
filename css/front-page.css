@@ -25,7 +25,7 @@
 
 /* Container holds both sections */
 .front-layout {
-  background-image: url(/images/blue-background.png);
+  background-image: url(/images/blue-background.jpeg);
   display: flex;
   gap: 20px;
 }
