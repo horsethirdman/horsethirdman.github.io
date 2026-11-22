@@ -31,7 +31,7 @@ details {
     padding: 12px 0;
   }
 
-div.card {
+.card {
   font-family: Inter, Roboto, Arial;
   padding: 15px;
   border-radius: 12.5px;
@@ -39,7 +39,7 @@ div.card {
   margin-inline: 15vw;
 }
 
-div#card-header {
+#card-header {
   display: flex;
   gap: 20px;
 }
@@ -131,6 +131,9 @@ div#card-header {
 @media screen and (max-width: 576px) {
   .front-layout {
     flex-direction: column; /* Hide sidebar entirely on phones */
+  }
+  .card{
+    width: 100%;
   }
 }
 
