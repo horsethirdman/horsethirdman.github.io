@@ -132,8 +132,14 @@ details {
   .front-layout {
     flex-direction: column; /* Hide sidebar entirely on phones */
   }
-  .card{
-    margin-inline: 0;
+  .card {
+    margin-inline:0;
+  }
+  #card-header {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center;    /* Centers items horizontally */
+    gap: 1rem;
   }
 }
 
