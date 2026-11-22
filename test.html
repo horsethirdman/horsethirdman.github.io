@@ -1,79 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <style>
-    body {
-    }
-    .container{
-      display: flex;
-      height: 100vh; /* Full viewport height */
-    }
-    .section{
-      flex: 1; /* Makes both sections equal width (50% each) */
-      padding: 20px;
-    }
-    .left{
-      background-color: #f4f4f4;
-    }
-    .right{
-      background-color: #e0e0e0;
-    }
-    #notes{
-      width: 100%
-    }
-  </style>
+  <title>Page Title</title>
+  <link rel="stylesheet" href="normal-sheet.css">
 </head>
+
 <body>
-
-  <div class="container">
-    <section class="section left">
-      <h2>Left Section</h2>
-      <p>Content for the left side goes here.</p>
-      <input type="text" id="notes"></input>
-    </section>
-    
-    <section class="section right">
-      <h2>Stopwatch</h2>
-      <p id="stopwatch" role="timer">00:00:00</p>
-      <button type="button" onclick="startStopwatch()">Start</button>
-      <button type="button" onclick="pauseStopwatch()">Pause</button>
-      <button type="button" onclick="resetStopwatch()">Reset</button>
-    </section>
-  </div>
-
-  <script>
-    let elapsed = 0;
-    let startedAt = 0;
-    let intervalId = null;
-
-    function updateStopwatch() {
-      const centiseconds = Math.floor((elapsed + (performance.now() - startedAt)) / 10);
-      const minutes = String(Math.floor(centiseconds / 6000)).padStart(2, '0');
-      const seconds = String(Math.floor(centiseconds / 100) % 60).padStart(2, '0');
-      const fraction = String(centiseconds % 100).padStart(2, '0');
-      document.getElementById('stopwatch').textContent = `${minutes}:${seconds}:${fraction}`;
-    }
-
-    function startStopwatch() {
-      if (intervalId !== null) return;
-      startedAt = performance.now();
-      intervalId = setInterval(updateStopwatch, 10);
-    }
-
-    function pauseStopwatch() {
-      if (intervalId === null) return;
-      elapsed += performance.now() - startedAt;
-      clearInterval(intervalId);
-      intervalId = null;
-      updateStopwatch();
-    }
-
-    function resetStopwatch() {
-      clearInterval(intervalId);
-      intervalId = null;
-      elapsed = 0;
-      document.getElementById('stopwatch').textContent = '00:00:00';
-    }
-  </script>
+  <details>
+    <summary>Click to read more</summary>
+    <p>This is the hidden dropdown text that appears when the user clicks the summary above.</p>
+  </details>
 </body>
 </html>
