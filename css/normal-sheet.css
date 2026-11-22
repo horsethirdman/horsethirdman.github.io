@@ -15,6 +15,11 @@
   display: none;
 }
 
+div.card {
+  border-radius: 12.5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin-inline: 15vw;
+}
 #in-force {
   display: inline;
   background: #B31B1B;   /* highlight color */
