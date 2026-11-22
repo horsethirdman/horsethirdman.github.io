@@ -45,6 +45,7 @@ div#card-header {
   color: white;
   font-weight: 600;
   font-family: Inter, sans-serif;
+  font-size: 20px;
 }
 
 /* Container holds both sections */
