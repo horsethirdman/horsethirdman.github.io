@@ -45,7 +45,6 @@ div#card-header {
   color: white;
   font-weight: 600;
   font-family: Inter, sans-serif;
-  font-size: 20px;
 }
 
 /* Container holds both sections */
@@ -133,6 +132,8 @@ div#card-header {
 .weather-signal {
   margin-left: -1rem;
   margin-right: -0.5rem;
+  margin-down: 0;
+  padding: 5px;
   background-color: #1a4b83;
   display: flex;
   justify-content: center;
