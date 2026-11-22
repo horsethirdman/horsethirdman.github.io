@@ -133,7 +133,7 @@ details {
     flex-direction: column; /* Hide sidebar entirely on phones */
   }
   .card{
-    width: 100%;
+    margin-inline: 0;
   }
 }
 
