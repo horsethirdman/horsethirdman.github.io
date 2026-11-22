@@ -3,16 +3,27 @@
   src: url(/typeface/inter.woff2) format(woff2);
 }
 
-.banner {
-  background-color: #1a4b83;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem; /* small spacing between items */
+header {
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
-.banner[hidden] {
-  display: none;
+footer {
+  background-color: #d3d3d3;
+  color: #222 !important;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+#bank-name {
+  display: inline;
+  text-decoration: none;
+  color: inherit;
 }
 
 div.card {
@@ -116,6 +127,18 @@ div#card-header {
   .front-layout {
     flex-direction: column; /* Hide sidebar entirely on phones */
   }
+}
+
+.weather-signal {
+  background-color: #1a4b83;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem; /* small spacing between items */
+}
+
+.weather-signal[hidden] {
+  display: none;
 }
 
 #purge {
