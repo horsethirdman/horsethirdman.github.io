@@ -131,6 +131,8 @@ div#card-header {
 }
 
 .weather-signal {
+  margin-left: -1rem;
+  margin-right: -0.5rem;
   background-color: #1a4b83;
   display: flex;
   justify-content: center;
