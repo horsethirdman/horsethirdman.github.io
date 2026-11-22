@@ -5,7 +5,7 @@ fetch('https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warn
     const tc = d.WTCSGNL;
     const code = tc?.code ?? null;
 
-    const banner = document.querySelector('.banner');
+    const banner = document.querySelector('.weather-signal');
     const img = document.getElementById('signal');
 
     // If elements are missing, bail out gracefully
