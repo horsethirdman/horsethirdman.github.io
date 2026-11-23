@@ -19,9 +19,17 @@
         <summary>Click to read more</summary>
           <p>This is the hidden dropdown text that appears when the user clicks the summary above.</p>
       </details>
+      <details>
+        <summary>Information required to submit your application</summary>
+          <p>This is the hidden dropdown text that appears when the user clicks the summary above.</p>
+      </details>
     </div>
     <small>Please see Terms and Conditions for rate, fee and other cost information, as well as an explanation of payment allocation. All terms may be subject to change.</small>
   </div>
+  <form>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+  </form>
   <button id="purge" type="button" onclick="localStorage.clear();sessionStorage.clear();window.location.reload(true);">Force reset</button>
 </body>
 </html>
