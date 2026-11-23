@@ -102,13 +102,13 @@ details {
   flex-direction: column;
   font-family: Inter, Roboto, Arial;
   background-color: white;
-  border-radius: 12.5px;
-  border: 1px solid #202a44;
   padding: 15px;
 }
 
 .login {
+  border-radius: 12.5px;
   width: 90%;
+  border: 1px solid #202a44;
 }
 
 .login label{
