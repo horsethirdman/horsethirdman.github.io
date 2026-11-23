@@ -11,7 +11,7 @@ header {
 
 footer {
   background-color: #d3d3d3;
-  color: #222 !important;
+  color: #222;
   width: 100vw;
   position: relative;
   left: 50%;
@@ -93,7 +93,7 @@ details {
 }
 
 #field-name {
-  flex-direction: row !important;
+  flex-direction: row;
 }
 
 /* login box: give a fixed max width so button can match it */
@@ -101,7 +101,6 @@ details {
   display: flex;
   flex-direction: column;
   font-family: Inter, Roboto, Arial;
-  background-color: white;
   padding: 15px;
 }
 
@@ -109,6 +108,7 @@ details {
   border-radius: 12.5px;
   width: 90%;
   border: 1px solid #202a44;
+  background-color: white;
 }
 
 .login label{
@@ -155,7 +155,7 @@ details {
 .weather-signal {
   margin-left: -1rem;
   margin-right: -0.5rem;
-  margin-down: 0;
+  margin-bottom: 0;
   padding: 0;
   background-color: #1a4b83;
   display: flex;
