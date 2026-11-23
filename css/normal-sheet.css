@@ -92,13 +92,22 @@ details {
   cursor: pointer;
 }
 
+#field-name {
+  flex-direction: row !important;
+}
+
 /* login box: give a fixed max width so button can match it */
-.login {
+form {
+  display: flex;
+  flex-direction: column;
   font-family: Inter, Roboto, Arial;
   background-color: white;
   border-radius: 12.5px;
-  border: 1px solid ##202a44;
+  border: 1px solid #202a44;
   padding: 15px;
+}
+
+.login {
   width: 90%;
 }
 
