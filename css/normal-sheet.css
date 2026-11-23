@@ -97,7 +97,7 @@ details {
 }
 
 /* login box: give a fixed max width so button can match it */
-form {
+.login, .application {
   display: flex;
   flex-direction: column;
   font-family: Inter, Roboto, Arial;
