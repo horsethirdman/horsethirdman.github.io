@@ -27,8 +27,18 @@
     <small>Please see Terms and Conditions for rate, fee and other cost information, as well as an explanation of payment allocation. All terms may be subject to change.</small>
   </div>
   <form>
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+    <div id="field-name">
+      <label for="legal-title">Title: *</label>
+      <select name="legal-title">
+        <option value="">Not Applicable/Other</option>
+        <option value="mr">Mr.</option>
+        <option value="ms">Ms.</option>
+      </select>
+      <label for="legal-first-name">First Name: *</label>
+      <input type="text" name="legal-first-name">
+      <label for="legal-last-name">Last Name: *</label>
+      <input type="text" name="legal-first-name">
+    </div>
   </form>
   <button id="purge" type="button" onclick="localStorage.clear();sessionStorage.clear();window.location.reload(true);">Force reset</button>
 </body>
